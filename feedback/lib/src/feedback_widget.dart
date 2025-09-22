@@ -393,6 +393,8 @@ class _FeedbackLayoutDelegate extends MultiChildLayoutDelegate {
   @override
   void performLayout(Size size) {
     if (!displayFeedback) {
+      // Explicitly position at zero offset - THIS FIXED THE RIGHT/DOWN OFFSET ON ANDROID
+      positionChild(_screenshotId, Offset.zero);
       layoutChild(_screenshotId, BoxConstraints.tight(size));
       return;
     }

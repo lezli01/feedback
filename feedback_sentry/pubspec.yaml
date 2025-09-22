@@ -15,7 +15,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  feedback: ^3.0.0
+  feedback:
+    git:
+      url: https://github.com/lezli01/feedback
+      path: feedback
+      ref: master
   sentry: ^9.0.0
 
 dev_dependencies:
